@@ -8,7 +8,7 @@
         <TextBox x:Name="OutputFileName" Text="{Binding OutputFile}" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,39,85,0"/>
         <Button x:Name="OutputButton" Content="Select..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="418,39,0,0" Height="23" Click="OutputButton_Click"/>
         <Button x:Name="ConvertButton" Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="418,166,0,0" Click="ConvertButton_Click"/>
-        <TextBox x:Name="LogBox" Text="{Binding Log}" HorizontalAlignment="Left" Height="118" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="403"/>
+        <TextBox x:Name="LogBox" Text="{Binding LogStr}" HorizontalAlignment="Left" Height="118" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="403"/>
 
     </Grid>
 </Window>
