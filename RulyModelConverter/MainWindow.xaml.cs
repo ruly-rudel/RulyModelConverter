@@ -30,9 +30,6 @@ namespace RulyModelConverter
         private void InputButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.FileName = "";
-            ofd.DefaultExt = "*.pmd";
-            ofd.FilterIndex = 1;
             ofd.Filter = "PMDファイル|*.pmd";
             if (ofd.ShowDialog() == true)
             {
@@ -43,11 +40,8 @@ namespace RulyModelConverter
         private void OutputButton_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = "*.pmf";
-            saveFileDialog.FilterIndex = 1;
             saveFileDialog.Filter = "PMFファイル|*.pmf";
-            bool? result = saveFileDialog.ShowDialog();
-            if (result == true)
+            if (saveFileDialog.ShowDialog() == true)
             {
                 App.VM.OutputFile = saveFileDialog.SafeFileName;
             }
