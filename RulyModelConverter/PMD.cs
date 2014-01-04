@@ -66,7 +66,9 @@ namespace RulyModelConverter
 
 
 		public Bone[]		Bone;
-		private Face[]		Face;
+		public Face[]		Face;
+
+        Dictionary<Dictionary<int, int>, byte[]> m_rename_pool;
 		
 		private int			m_skin_disp_num;
 		private int			m_bone_disp_name_num;
@@ -165,22 +167,22 @@ namespace RulyModelConverter
 			CreateRenderList ();
 
 			// clearnup buffers
-			Vertex = null;
-			Normal = null;
-			Uv = null;
-			Weight = null;
-			Index = null;
+            //Vertex = null;
+            //Normal = null;
+            //Uv = null;
+            //Weight = null;
+            //Index = null;
 		}
 
 		private void CreateRenderList()
 		{
-			var rename_pool = new Dictionary<Dictionary<int, int>, byte[]>();
+			m_rename_pool = new Dictionary<Dictionary<int, int>, byte[]>();
 
 			foreach (var i in Material) {
-				reconstructMaterial1 (i, 0, rename_pool, 48);	//ad-hock
+				reconstructMaterial1 (i, 0, m_rename_pool, 48);	//ad-hock
 //				RenderList.Add (i);
 			}
-			Material = null;
+            //Material = null;
 		}
 
 

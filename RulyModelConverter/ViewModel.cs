@@ -21,6 +21,7 @@ namespace RulyModelConverter
 
 
         private PMD pmd;
+        private PMF pmf;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -36,6 +37,8 @@ namespace RulyModelConverter
         {
             pmd = new PMD(InputFile);
             pmd.SetupShellSurface();
+            pmf = new PMF(pmd);
+            pmf.Save(OutputFile);
         }
     }
 }

@@ -55,6 +55,7 @@
     </ApplicationDefinition>
     <Compile Include="Log.cs" />
     <Compile Include="PMD.cs" />
+    <Compile Include="PMF.cs" />
     <Compile Include="ShellSurface.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="ViewModel.cs" />

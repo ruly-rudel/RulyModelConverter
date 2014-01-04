@@ -48,9 +48,10 @@ namespace RulyModelConverter
 
         }
 
-        private void ConvertButton_Click(object sender, RoutedEventArgs e)
+        private async void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
-            App.VM.Convert();
+            await Task.Run(() => App.VM.Convert());
+            App.VM.LogStr += "Convert End.\n";
             return;
         }
     }
