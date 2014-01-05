@@ -39,6 +39,10 @@ namespace RulyModelConverter
             pmd.SetupShellSurface();
             pmf = new PMF(pmd);
             pmf.Save(OutputFile);
+            Log.Debug("RMC", "finish saving file.");
+            Log.Debug("RMC", "verification...");
+            var p = new PMF();
+            p.Load(OutputFile);
         }
     }
 }

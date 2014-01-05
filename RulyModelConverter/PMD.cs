@@ -441,10 +441,11 @@ namespace RulyModelConverter
 
 					b.head_pos = Util.ReadFloats(br, 3);
 					b.is_leg = b.name.Contains("ひざ");
-				
-					if (b.tail != -1) {
-						Bone[i] = b;
-					}
+
+                    Bone[i] = b;
+                    //if (b.tail != -1) {
+                    //    Bone[i] = b;
+                    //}
 				}
 			}
 		}

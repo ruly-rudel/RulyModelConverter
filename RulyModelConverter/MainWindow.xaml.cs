@@ -43,7 +43,7 @@ namespace RulyModelConverter
             saveFileDialog.Filter = "PMFファイル|*.pmf";
             if (saveFileDialog.ShowDialog() == true)
             {
-                App.VM.OutputFile = saveFileDialog.SafeFileName;
+                App.VM.OutputFile = saveFileDialog.FileName;
             }
 
         }
